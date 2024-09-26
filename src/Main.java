@@ -1,7 +1,4 @@
-import br.com.dantas.desafioDioPoo.dominio.Bootcamp;
-import br.com.dantas.desafioDioPoo.dominio.Curso;
-import br.com.dantas.desafioDioPoo.dominio.Dev;
-import br.com.dantas.desafioDioPoo.dominio.Mentoria;
+import br.com.dantas.desafioDioPoo.dominio.*;
 
 import java.time.LocalDate;
 
@@ -37,7 +34,6 @@ public class Main {
         bootcamp.getConsteudos().add(curso1);
         bootcamp.getConsteudos().add(curso2);
         bootcamp.getConsteudos().add(mentoria1);
-
         Dev dev = new Dev();
         dev.setNome("Carlos");
         dev.inscreverBootcamp(bootcamp);
@@ -45,6 +41,8 @@ public class Main {
         dev.progredir();
         System.out.println("Conteúdo conscluídos: " + dev.getConsteudosConcluidos());
         System.out.println(dev.calcularTotalXp());
+        System.out.println(bootcamp.getDataInicial());
+
 
 
         Dev dev2 = new Dev();

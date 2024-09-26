@@ -2,7 +2,7 @@ package br.com.dantas.desafioDioPoo.dominio;
 
 public abstract class Conteudo {
 
-     protected static final  double XP_PADRAO = 10;
+     protected static final double XP_PADRAO = 10;
 
      private String titulo;
      private String descricao;
@@ -24,6 +24,4 @@ public abstract class Conteudo {
      }
 
      public abstract double calcularXp();
-
-
 }
