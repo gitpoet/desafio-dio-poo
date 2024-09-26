@@ -1,4 +1,6 @@
+import br.com.dantas.desafioDioPoo.dominio.Bootcamp;
 import br.com.dantas.desafioDioPoo.dominio.Curso;
+import br.com.dantas.desafioDioPoo.dominio.Dev;
 import br.com.dantas.desafioDioPoo.dominio.Mentoria;
 
 import java.time.LocalDate;
@@ -28,5 +30,35 @@ public class Main {
         System.out.println(curso1);
         System.out.println(curso2);
         System.out.println(mentoria1);
+
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcap Java developer");
+        bootcamp.setDescricao("Descrição Bootcamp java developer");
+        bootcamp.getConsteudos().add(curso1);
+        bootcamp.getConsteudos().add(curso2);
+        bootcamp.getConsteudos().add(mentoria1);
+
+        Dev dev = new Dev();
+        dev.setNome("Carlos");
+        dev.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdo inscritos: " + dev.getConteudosInscritos());
+        dev.progredir();
+        System.out.println("Conteúdo conscluídos: " + dev.getConsteudosConcluidos());
+        System.out.println(dev.calcularTotalXp());
+
+
+        Dev dev2 = new Dev();
+        dev2.setNome("Ivana");
+        dev2.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdo inscritos: " + dev2.getConteudosInscritos());
+        dev2.progredir();
+        System.out.println("Conteúdo conscluídos: " + dev2.getConsteudosConcluidos());
+        System.out.println(dev2.calcularTotalXp());
+
+
+
+
+
+
     }
 }
